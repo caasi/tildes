@@ -2,69 +2,7 @@
 <html>
   <head>
     <title>~caasi</title>
-    <style>
-html, body {
-  height: 100%;
-}
-body {
-  background-color: black;
-  color: green;
-  padding: 0 4rem;
-  font-family: monospace;
-}
-body * {
-  font-size: 1rem;
-}
-hr {
-  border: none;
-}
-hr:before {
-  content: '--'
-}
-a {
-  text-decoration: none;
-  color: lightgreen;
-  font-weight: bold;
-}
-a:before {
-  content: '[';
-}
-a:after {
-  content: ']';
-}
-a:hover {
-  text-decoration: underline;
-}
-h1 {
-  color: lightgreen;
-}
-h2, h3, h4, h5, h6 {
-  font-size: 1rem;
-}
-h2 {
-  background-color: green;
-  color: black;
-  padding: 0 1rem;
-  margin: 1rem 0;
-}
-h3 {
-  color: lightgreen;
-}
-h3, p {
-  margin: 0.5rem 0;
-}
-section {
-  padding: 0 1rem;
-}
-code {
-  font-style: italic;
-  color: lightgreen;
-}
-blockquote {
-  margin: 0;
-  font-style: italic;
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
   <body>
     <h1>~caasi</h1>
@@ -72,21 +10,12 @@ blockquote {
     <h2>Table of Contents</h2>
     <nav id="toc">
       <ul>
-        <li><a href="#about">Who am I?</a></li>
         <li><a href="#logs">Logs</a></li>
+        <li><a href="#about">Who am I?</a></li>
         <li><a href="#vip">Important People in My Career</a></li>
         <!--li><a href="#"></a></li-->
       </ul>
     </nav>
-    <article id="about">
-      <h2>Who am I?</h2>
-      <section>
-        <p>I am a web developer in Taiwan.</p>
-        <p>I learned the tildeverse from <a target="_blank" href="https://medium.com/message/tilde-club-i-had-a-couple-drinks-and-woke-up-with-1-000-nerds-a8904f0a2ebf">I had a couple drinks and woke up with 1,000 nerds - The story of Tilde.Club</a> and found the <a target="_blank" href="/">ctrl-c.club</a>.</p>
-        <p>When I was a boy, I read the Chinese version of <a target="_blank" href="http://shop.oreilly.com/product/9780937175729.do">Practical UNIX Security</a> without accessing to anykind of *nix. I am also touched by stories of people in computer industry. So I must be a citizen of the tildeverse.</p>
-        <p>Also I have to thank our admin at the <a target="_blank" href="/">ctrl-c.club</a> for building these little town.</p>
-      </section>
-    </article>
     <article id="logs">
       <h2>Logs</h2>
       <section>
@@ -95,16 +24,25 @@ blockquote {
         <p>Too many pages to read. I can't read as fast as a native English user. What if I can? Maybe I will become a better programmer, and learn more about the culture. But I can't. I can just  read as much as I can.</p>
         <hr />
         <p>CSS sucks. I have to trace the stucture of my web app, so I can create BEM-like class names dynamically. With the power of SASS <code>@import</code>, I can generate CSS with those names statically. I still hope someday I can use <a target="_blank" href="https://speakerdeck.com/vjeux/react-css-in-js">CSS in JS</a> in my company. I don't want to maintain two dependancies at all.</p>
+        <hr />
+        <p>Just make a strange promise that I will make my own tildeverse for friends after I leave my current job.</p>
+        <p>Paul Ford's words in <a target="_blank" href="http://toe.prx.org/2014/11/backspace-to-the-future-the-dislike-club-part-i/">the dislike club part I</a> tells me that when the web becomes bigger enough to cover our life, we lost a place to escape from the rest of the world.</p>
+        <p>lunadance and I did something similar in the 2003. We write secret diary in the BBS or the personal website. I think here in Taiwan we have not lost this kind of personal place right now. We can still open personal board in the BBS, and PTT - the biggest BBS here - is still improving <a target="_blank" href="https://github.com/ptt/pttbbs">it's system</a>.</p>
+      </section>
+    </article>
+    <article id="about">
+      <h2>Who am I?</h2>
+      <section>
+        <p>I learned the tildeverse from <a target="_blank" href="https://twitter.com/Ellaeon">@Ellaeon</a>'s tweet. He mentioned Paul Ford's <a target="_blank" href="https://medium.com/message/tilde-club-i-had-a-couple-drinks-and-woke-up-with-1-000-nerds-a8904f0a2ebf">I had a couple drinks and woke up with 1,000 nerds - The story of Tilde.Club</a>.</p>
+        <p>Then I found the <a target="_blank" href="/">ctrl-c.club</a>. I have to thank the admin for building these little town. So I can set a part of myself back to the 90s and be naive again.</p>
+        <hr />
+        <p>I am a web developer in Taiwan.</p>
+        <p>When I was a boy, I read the Chinese version of <a target="_blank" href="http://shop.oreilly.com/product/9780937175729.do">Practical UNIX Security</a> without accessing to anykind of *nix. I am also touched by stories of people in computer industry. So I must be a citizen of the tildeverse.</p>
       </section>
     </article>
     <acticle id="vip">
       <h2>Important People in My Career</h2>
       <ul>
-        <li>
-          <a target="_blank" href="https://twitter.com/Ellaeon">@Ellaeon</a>
-          <br />
-          <p>I read Paul Ford's story about ~ from @Ellaeon's tweet.</p>
-        </li>
         <li>
           <a href="#">lunadance</a>
           <p>The friend who showed me the world of geeks.</p>
