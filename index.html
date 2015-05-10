@@ -14,7 +14,9 @@ body {
 }
 hr {
   border: none;
-  border-bottom: 1px solid darkgreen;
+}
+hr:before {
+  content: '--'
 }
 a {
   text-decoration: none;
@@ -44,13 +46,16 @@ h2 {
 }
 h3 {
   color: lightgreen;
-  border-bottom: 1px solid lightgreen;
 }
 h3, p {
-  margin: 1rem;
+  margin: 0.5rem 1.5rem;
 }
 li p {
   margin: 0.5rem 0;
+}
+code {
+  font-style: italic;
+  color: lightgreen;
 }
 blockquote {
   margin: 0.5rem 0;
@@ -79,7 +84,10 @@ blockquote p {
     <p>When I was a boy, I read the Chinese version of <a target="_blank" href="http://shop.oreilly.com/product/9780937175729.do">Practical UNIX Security</a> without accessing to anykind of *nix. I am also touched by stories of people in the Computer history. So I must be a citizen of the tildeverse.</p>
     <h2 id="logs">Logs</h2>
     <h3>05/10/15</h3>
-    <p>I created my homepage. I think my page should like this instead of listing jobs I had and skills I have.</p>
+    <p>I created my homepage.</p>
+    <p>It's wired to have <code>ghc</code> without <code>cabal-install</code>. What should I do if I want to install some hackage like <code>wreq</code>?</p>
+    <p>Too many pages to read. I can't read as fast as a native English user. What if I can? Maybe I will become a better programmer, and learn more about the culture. But I can't. I can just  read as much as I can.</p>
+    <p>CSS sucks. I have to trace the stucture of my web app, so I can create BEM-like class names dynamically. With the power of SASS <code>@import</code>, I can generate CSS with those names statically. I still hope someday I can use <a target="_blank" href="https://speakerdeck.com/vjeux/react-css-in-js">CSS in JS</a> in my company. I don't want to maintain two dependancies at all.</p>
     <h2 id="thanks">Special Thanks</h2>
     <ul>
       <li>
@@ -100,9 +108,8 @@ blockquote p {
       <li>
         <a href="#">otori-tan</a>
         <br />
-        <p>The one who saved me from struggling in findding sh*tty jobs in my hometown.</p>
-        <p>I don't know how to thank her properly. Saying something like "I wll give my life to the things you admired" is a little too much, isn't it?</p>
-        <p>So I must travel away to many uncharted lands and wish I can bring something to the community and her.</p>
+        <p>The one who saved me from struggling in findding sh*tty jobs in my hometown and showed me the power of connections of the Web. She is one of the earliest digital natives in my generation. She learned and mastered many things from the Internet, and created so many feedbacks to the global community.</p>
+        <p>I don't know how to thank her properly. Saying something like "I wll give my life to the things you admired" isn't a mature option. So I must travel away to many uncharted lands and wish I can bring something to the community and her.</p>
       </li>
     </ul>
     <hr />
