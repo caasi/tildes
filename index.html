@@ -9,8 +9,11 @@ html, body {
 body {
   background-color: black;
   color: green;
-  padding: 2rem 4rem;
+  padding: 0 4rem;
   font-family: monospace;
+}
+body * {
+  font-size: 1rem;
 }
 hr {
   border: none;
@@ -48,21 +51,17 @@ h3 {
   color: lightgreen;
 }
 h3, p {
-  margin: 0.5rem 1.5rem;
-}
-li p {
   margin: 0.5rem 0;
+}
+section {
+  padding: 0 1rem;
 }
 code {
   font-style: italic;
   color: lightgreen;
 }
 blockquote {
-  margin: 0.5rem 0;
-  font-size: 0.6rem;
-}
-blockquote p {
-  margin: 0.3rem 0;
+  margin: 0;
   font-style: italic;
 }
     </style>
@@ -73,50 +72,58 @@ blockquote p {
     <h2>Table of Contents</h2>
     <nav id="toc">
       <ul>
-        <li><a href="#why">Why am I here?</a></li>
+        <li><a href="#about">Who am I?</a></li>
         <li><a href="#logs">Logs</a></li>
-        <li><a href="#thanks">Special Thanks</a></li>
+        <li><a href="#vip">Important People in My Career</a></li>
         <!--li><a href="#"></a></li-->
       </ul>
     </nav>
-    <h2 id="why">Why am I here?</h2>
-    <p>I learned the tildeverse from <a target="_blank" href="https://medium.com/message/tilde-club-i-had-a-couple-drinks-and-woke-up-with-1-000-nerds-a8904f0a2ebf">I had a couple drinks and woke up with 1,000 nerds - The story of Tilde.Club</a> and found the <a target="_blank" href="/">ctrl-c.club</a>.</p>
-    <p>When I was a boy, I read the Chinese version of <a target="_blank" href="http://shop.oreilly.com/product/9780937175729.do">Practical UNIX Security</a> without accessing to anykind of *nix. I am also touched by stories of people in the Computer history. So I must be a citizen of the tildeverse.</p>
-    <h2 id="logs">Logs</h2>
-    <h3>05/10/15</h3>
-    <p>I created my homepage.</p>
-    <p>It's wired to have <code>ghc</code> without <code>cabal-install</code>. What should I do if I want to install some hackage like <code>wreq</code>?</p>
-    <p>Too many pages to read. I can't read as fast as a native English user. What if I can? Maybe I will become a better programmer, and learn more about the culture. But I can't. I can just  read as much as I can.</p>
-    <p>CSS sucks. I have to trace the stucture of my web app, so I can create BEM-like class names dynamically. With the power of SASS <code>@import</code>, I can generate CSS with those names statically. I still hope someday I can use <a target="_blank" href="https://speakerdeck.com/vjeux/react-css-in-js">CSS in JS</a> in my company. I don't want to maintain two dependancies at all.</p>
-    <h2 id="thanks">Special Thanks</h2>
-    <ul>
-      <li>
-        <a target="_blank" href="https://twitter.com/Ellaeon">@Ellaeon</a>
-        <br />
-        <p>I read Paul Ford's story about ~ from @Ellaeon's tweet.</p>
-      </li>
-      <li>
-        <a href="#">lunadance</a>
-        <br />
-        <p>The friend who showed me the world of geeks.</p>
-      </li>
-      <li>
-        <a target="_blank" href="http://www.godfat.org/">godfat</a>
-        <br />
-        <p>The friend who showed me the power of functional languages.</p>
-      </li>
-      <li>
-        <a href="#">otori-tan</a>
-        <br />
-        <p>The one who saved me from struggling in finding sh*tty jobs in my hometown and showed me the power of connections of the Web. She is one of the earliest digital natives in my generation. She learned and mastered many things from the Internet, and created so many feedbacks to the global community.</p>
-        <p>I don't know how to thank her properly. Saying something like "I wll give my life to the things you admired" isn't a mature option. So I must travel away to many uncharted lands and wish I can bring something to the community and her.</p>
-      </li>
-    </ul>
-    <hr />
-    <blockquote>
-      <p>Neo: I told you, Kid, you found me, I didn't find you.</p>
-      <p>Kid: I know, but you got me out! You saved me!</p>
-      <p>Neo: You saved yourself.</p>
-    </blockquote>
+    <article id="about">
+      <h2>Who am I?</h2>
+      <section>
+        <p>I am a web developer in Taiwan.</p>
+        <p>I learned the tildeverse from <a target="_blank" href="https://medium.com/message/tilde-club-i-had-a-couple-drinks-and-woke-up-with-1-000-nerds-a8904f0a2ebf">I had a couple drinks and woke up with 1,000 nerds - The story of Tilde.Club</a> and found the <a target="_blank" href="/">ctrl-c.club</a>.</p>
+        <p>When I was a boy, I read the Chinese version of <a target="_blank" href="http://shop.oreilly.com/product/9780937175729.do">Practical UNIX Security</a> without accessing to anykind of *nix. I am also touched by stories of people in computer industry. So I must be a citizen of the tildeverse.</p>
+      </section>
+    </article>
+    <article id="logs">
+      <h2>Logs</h2>
+      <section>
+        <h3>05/10/15</h3>
+        <p>It's wired to have <code>ghc</code> without <code>cabal-install</code>. What should I do if I want to install some hackage like <code>wreq</code>?</p>
+        <p>Too many pages to read. I can't read as fast as a native English user. What if I can? Maybe I will become a better programmer, and learn more about the culture. But I can't. I can just  read as much as I can.</p>
+        <hr />
+        <p>CSS sucks. I have to trace the stucture of my web app, so I can create BEM-like class names dynamically. With the power of SASS <code>@import</code>, I can generate CSS with those names statically. I still hope someday I can use <a target="_blank" href="https://speakerdeck.com/vjeux/react-css-in-js">CSS in JS</a> in my company. I don't want to maintain two dependancies at all.</p>
+      </section>
+    </article>
+    <acticle id="vip">
+      <h2>Important People in My Career</h2>
+      <ul>
+        <li>
+          <a target="_blank" href="https://twitter.com/Ellaeon">@Ellaeon</a>
+          <br />
+          <p>I read Paul Ford's story about ~ from @Ellaeon's tweet.</p>
+        </li>
+        <li>
+          <a href="#">lunadance</a>
+          <p>The friend who showed me the world of geeks.</p>
+        </li>
+        <li>
+          <a target="_blank" href="http://www.godfat.org/">godfat</a>
+          <p>The friend who showed me the power of functional languages.</p>
+        </li>
+        <li>
+          <a href="#">otori-tan</a>
+          <p>The one who saved me from struggling in finding sh*tty jobs in my hometown and showed me the power of connections of the Web. She is one of the earliest digital natives in my generation. She learned and mastered many things from the Internet, and created so many feedbacks to the global community.</p>
+          <p>I don't know how to thank her properly. Saying something like "I wll give my life to the things you admired" isn't a mature option. So I must travel away to many uncharted lands and wish I can bring something to the community and her.</p>
+        </li>
+      </ul>
+      <hr />
+      <blockquote>
+        Neo: I told you, Kid, you found me, I didn't find you.
+        <br />Kid: I know, but you got me out! You saved me!
+        <br />Neo: You saved yourself.
+      </blockquote>
+    </article>
   </body>
 </html>
