@@ -52,11 +52,43 @@ section {
   padding: 0 1rem;
   margin-bottom: 3rem;
 }
+pre code:before,
+section blockquote:before {
+  position: absolute;
+  font-size: 0.8rem;
+  right: 0.2rem;
+  bottom: 0.1rem;
+}
 code {
   font-style: italic;
   color: lightgreen;
 }
+pre,
+section blockquote {
+  position: relative;
+  background-color: green;
+  padding: 0.5rem 1rem 1.4rem 1rem;
+  margin: 0 1.5rem;
+}
+pre {
+  overflow: hidden;
+}
+pre code {
+  font-style: normal;
+}
+pre code:before {
+  content: "<code>";
+}
 blockquote {
   margin: 0;
+  font-style: italic;
+}
+section blockquote {
+  color: lightgreen;
+}
+section blockquote:before {
+  content: "“quote”";
+}
+q {
   font-style: italic;
 }
