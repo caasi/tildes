@@ -21,6 +21,19 @@
     <article id="logs">
       <h2>Logs</h2>
       <section>
+        <h3>05/21/15</h3>
+        <p><code>Access-Control-Allow-Origin</code> will be a problem if one can control one's response headers in many ways. In .NET land, you can <a target="_blank" href="http://enable-cors.org/server_aspnet.html">install ther CORS NuGet package</a>, or just <a target="_blank" href="http://enable-cors.org/server_iis6.html">inject it</a> in the IIS Manager.</p>
+        <p>There is a note in <a target="_blank" href="http://www.w3.org/TR/cors/#access-control-allow-origin-response-header">the W3C recommendation</a>:</p>
+        <blockquote>In practice the origin-list-or-null production is more constrained. Rather than allowing a space-separated list of origins, it is either a single origin or the string "null".</blockquote>
+        <p>It will be inconvenient if one can't modify the header programmatically. So if one want to enable CORS for one's subdomains, one have to <a target="_blank" href="http://tech.shift.com/post/65650561508/cors-with-wildcard-subdomains-using-nginx">write one's own function</a>.</p>
+        <p>What a mess.</a>
+        <hr />
+        <pre><code>fn main() {
+  println!("hello, world");
+}</code></pre>
+        <p>Codes are not pretty without a syntax highlighter.</p>
+      </section>
+      <section>
         <h3>05/20/15</h3>
         <p>A friend of mine told me how he got this job yesterday. The power of local open source community helps him become a contributor, the passion in table game helps him meet more people, and the RoR helps him become a better person.</p>
         <p>Then I realized that the number of projects one did doesn't matter. One's mental health is more important. Because it's not a job. It's the life itself.</p>
