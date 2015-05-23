@@ -89,6 +89,10 @@ section blockquote {
 section blockquote:before {
   content: "“quote”";
 }
+section iframe {
+  display: block;
+  margin: 0.5rem auto;
+}
 q {
   font-style: italic;
 }
