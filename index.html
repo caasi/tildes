@@ -21,9 +21,35 @@
     <article id="logs">
       <h2>Logs</h2>
       <section>
+        <h3>06/09/15</h3>
+        <p><a target="_blank" href="http://livescript.net/">LiveScript</a> has already become an important part of my career.</p>
+        <pre><code>#!/usr/bin/env lsc
+require! {
+  'fs'
+  'markdown-to-ast'
+  'prelude-ls': { concat-map, filter, id, join }
+  'livescript': LiveScript
+}
+
+[,, ...files] = process.argv
+
+const extract = ({ type, children = [], value = '' }) -&gt;
+  result = children |&gt; concat-map extract |&gt; filter id |&gt; join "\n"
+  switch
+  | type is 'CodeBlock' =&gt; value + result
+  | otherwise           =&gt; result
+
+for filepath in files
+  err, data &lt;- fs.readFile filepath, encoding: \utf-8
+  LiveScript.run extract markdown-to-ast.parse data</code></pre>
+        <p>It's not hard to have literate LiveScript. CoffeeScript has <a target="_blank" href="https://github.com/jashkenas/coffeescript/blob/1f197fcc1bf1a15bc45a6b23fb3f706ffcb77025/src/helpers.coffee#L73">a more simple approach</a>(also check this <a target="_blank" href="https://github.com/michaelficarra/CoffeeScriptRedux/issues/209">PR</a> in CoffeeScriptRedux). But I think the editor support is more important.</p>
+      </section>
+      <section>
         <h3>06/05/15</h3>
-        <p>Yesterday MnO2 gave a talk about <a target="_blank" href="https://www.youtube.com/watch?v=hVPMeHYWtos">Hindley Milner Type System(in Chinese)</a>. The talk introduces the basics of type inference. Then I found so unification libs like <a target="_blank" herf="https://github.com/bramstein/junify">junify</a> and <a target="_blank" href="https://github.com/heya/unify">heya-unify</a> in JavaScript. @goatslacker also mentioned about unification in <a target="_blank" href="https://github.com/gkz/LiveScript/issues/138">LiveScript's issue</a> before.</p>
+        <p>Yesterday MnO2 gave a talk about <a target="_blank" href="https://www.youtube.com/watch?v=hVPMeHYWtos">Hindley Milner Type System(in Chinese)</a>. The talk introduces the basics of type inference. Then I found so unification libs like <a target="_blank" href="https://github.com/bramstein/junify">junify</a> and <a target="_blank" href="https://github.com/heya/unify">heya-unify</a> in JavaScript. @goatslacker also mentioned about unification in <a target="_blank" href="https://github.com/gkz/LiveScript/issues/138">LiveScript's issue</a> before.</p>
         <p>Not sure if the destructuring is a simpler version of type inference or not.</p>
+        <hr />
+        <p>It is possible to write a service to <a target="_blank" href="http://www.instructables.com/id/Reverse-engineering-of-an-Air-Conditioning-control/">control your air conditioner</a>.</p>
       </section>
       <section>
         <h3>06/03/15</h3>
