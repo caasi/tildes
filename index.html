@@ -21,6 +21,10 @@
     <article id="logs">
       <h2>Logs</h2>
       <section>
+        <h3>06/16/15</h3>
+        <p><a target="_blank" href="http://www.seas.upenn.edu/~cis194/fall14/spring13/lectures.html">CIS 194</a> is much more interesting than I expect. Split strings recursively is fun. Print many strings with foldM is fun.</p>
+      </section>
+      <section>
         <h3>06/09/15</h3>
         <p><a target="_blank" href="http://livescript.net/">LiveScript</a> has already become an important part of my career.</p>
         <pre><code>#!/usr/bin/env lsc
@@ -42,7 +46,7 @@ const extract = ({ type, children = [], value = '' }) -&gt;
 for filepath in files
   err, data &lt;- fs.readFile filepath, encoding: \utf-8
   LiveScript.run extract markdown-to-ast.parse data</code></pre>
-        <p>It's not hard to have literate LiveScript. CoffeeScript has <a target="_blank" href="https://github.com/jashkenas/coffeescript/blob/1f197fcc1bf1a15bc45a6b23fb3f706ffcb77025/src/helpers.coffee#L73">a more simple approach</a>(also check this <a target="_blank" href="https://github.com/michaelficarra/CoffeeScriptRedux/issues/209">PR</a> in CoffeeScriptRedux). But I think the editor support is more important.</p>
+        <p>It's not hard to have literate LiveScript. CoffeeScript has <a target="_blank" href="https://github.com/jashkenas/coffeescript/blob/1f197fcc1bf1a15bc45a6b23fb3f706ffcb77025/src/helpers.coffee#L73">a simpler approach</a>(also check this <a target="_blank" href="https://github.com/michaelficarra/CoffeeScriptRedux/issues/209">PR</a> in CoffeeScriptRedux). But I think the editor support is more important.</p>
       </section>
       <section>
         <h3>06/05/15</h3>
