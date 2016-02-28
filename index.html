@@ -21,6 +21,92 @@
     <article id="logs">
       <h2>Logs</h2>
       <section>
+        <h3>02/28/16</h3>
+        <p>It's possible to let go by accepting my own limitations. I don't convert to the faith. I didn't finish my CSIE training before the autumn of 2015.</p>
+        <p>So I can't fill up the &nbsp;&nbsp;&nbsp;&nbsp; before I filled up mine. I can't dance.</p>
+        <hr/>
+        <p>I remembered that she missed you at least three times in the past few months.</p>
+      </section>
+      <section>
+        <h3>02/28/16</h3>
+        <p>Hi, caasi in 1/14. How's your plan? The next Workshop is in 1/28; right before the Lunar New Year. I am you from 2/28, and I will tell you something like: You'll been to ShangHei. You will feel uncomfortable, but you know you have to understand China. You will read her code when you visiting the SJTU. You read like a boss, but you still don't get it.</p>
+        <p>The most important thing is that I'll tell you something about Haskell! So you may be happier on the lonesome road.</p>
+        <hr/>
+        <pre><code>main = rhs</code></pre>
+        <p>will become</p>
+        <pre><code>PatBind l
+  (PVar l (Ident l "main"))
+  rhs
+  Nothing</code></pre>
+        <p><code>l</code> are the source locations. You can clean it up by using the <code>forgetL</code> fuction. the P in the <code>PVar</code> means "pattern". <code>Nothing</code> is for <code>where</code> bindings, and in this case there aren't any.</p>
+        <hr/>
+        <pre><code>case Just (Just (Pair 3 5)) of</code></pre>
+        <p>will be</p>
+        <pre><code>Case l
+  (App l
+    (Con l (UnQual l (Ident l "Just")))
+    (Paren l
+      (App l
+        (Con l (UnQual l (Ident l "Just")))
+        (Paren l
+          (App l
+            (App l
+              (Con l (UnQual l (Ident l "Pair")))
+              (Lit l (Int l 3 "3"))
+            )
+            (Lit l (Int l 5 "5"))
+          )
+        )
+      )
+    )
+  )</code></pre>
+        <p>It is followed by some <code>[Alt l]</code>.</p>
+        <pre><code>_ | False -&gt; exp</pre></code>
+        <p>will be</p>
+        <pre><code>Alt l
+  (PWildCard l)
+  (GuardedRhss l
+    [ GuardedRhs l
+        [ Qualifier l (Con l (UnQual l (Ident l "False")))
+        ]
+        exp
+    ]
+  )
+  Nothing</pre></code>
+        <p>There are two kinds of constructors for <code>Rhs</code> type: <code>UnGuardedRhs</code> and <code>GuardedRhss</code>. The former has one <code>exp</code> in it. And the later has much <code>GuardedRhs</code>; they are looked like <code>| stmts = exp</code> or <code>| stmts -&gt; exp</code>.</p>
+        <hr/>
+        <code><pre>| Nothing -&gt; exp</pre></code>
+        <p>will be</p>
+        <code><pre>Alt l
+  (PApp l (UnQual l (Ident l "Nothing")) [])
+  (UnGuardedRhs l exp)
+  Nothing</pre></code>
+        <p>The data constructor <code>Nothing</code> is wrapped by a <code>PApp</code>, and it has no parameter.</p>
+        <hr/>
+        <code><pre>a | False -&gt; exp0
+  | True  -&gt; exp1</pre></code>
+        <p>will be</p>
+        <code><pre>Alt l
+  (PVar l (Ident "a"))
+  (GuardedRhss l
+    [ GuardedRhs l
+        [ Qualifier l (Con l (UnQual l (Ident l "False")))
+        ]
+        exp0
+    , GuardedRhs l
+        [ Qualifier l (Con l (UnQual l (Ident l "True")))
+        ]
+        exp1
+    ]
+  )
+  Nothing</pre></code>
+        <p>One can see there are two <code>GuardedRhs</code> in <code>GuardedRhss</code> clearly.</p>
+        <hr/>
+        <p>Now you can understand <code>altToPartial</code>, <code>dataConToShape</code>, <code>buildReorder</code> and <code>orderedCaseToExp</code>. You need take your time to understand the AST. It's not that hard.</p>
+        <hr/>
+        <p>BTW, you will start to listen to songs composed by Deserts Xuan. You will noticed that the feeling you borrowed from the others is "losing". You still don't understand what you observed. Just like you will never understand yourself.</p>
+      </section>
+      <section>
         <h3>02/18/16</h3>
         <p><a href="http://www.ctrl-c.club/~greymtr/logs/" target="_blank">~greymtr</a> hosts a logbot for us.</p>
       </section>
