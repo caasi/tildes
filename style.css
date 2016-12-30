@@ -89,6 +89,7 @@ section blockquote {
 section blockquote:before {
   content: "“quote”";
 }
+section .image img,
 section iframe {
   display: block;
   margin: 0.5rem auto;
