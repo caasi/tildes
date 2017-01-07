@@ -6,9 +6,7 @@ body {
   color: green;
   padding: 0 4rem;
   font-family: monospace;
-}
-body * {
-  font-size: 1rem;
+  font-size: 150%;
 }
 hr {
   border: none;
@@ -33,7 +31,7 @@ a:hover {
 h1 {
   color: lightgreen;
 }
-h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-size: 1rem;
 }
 h2 {
